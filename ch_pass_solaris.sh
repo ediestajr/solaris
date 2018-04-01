@@ -1,6 +1,12 @@
 #!/usr/local/bin/expect
 
-# Ed Diesta Jr - 20180401
+set params [llength $argv];
+if { $params < 2} {
+   puts "/usr/local/bin/expect ch_pass_solaris.sh {user} {password}"
+   puts "/usr/local/bin/expect ch_pass_solaris.sh root 'S0lar5_iS'"
+   exit 2
+}
+
 
 # This will change user/root password in Solaris
 
